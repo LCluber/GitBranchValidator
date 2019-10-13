@@ -4,8 +4,8 @@
 let args = process.argv.splice(process.execArgv.length + 2);
 
 // Retrieve the first argument
-let pattern = args[0];
+let customPattern = args[0];
 
-const validator = require('./lib/validate.js');
+const validator = require('../lib/validate.js');
 
-validator.test();
+validator.test(customPattern);

@@ -1,5 +1,5 @@
 {
-  "name": "branchvalidator",
+  "name": "@lcluber/gitbranchvalidator",
   "version": "0.0.1",
   "description": "git branch name validator",
   "keywords": [
@@ -12,19 +12,35 @@
     "pre push",
     "pre commit"
   ],
-
-  "main": "./index.js",
+  "homepage": "http://frameratjs.lcluber.com",
+  "main": "./lib/validate.js",
   "bin": {
-    "validatebranch": "./bin/global.js"
+    "gbvalidator": "./bin/index.js"
   },
   "preferGlobal": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "files": [
+    "bin/",
+    "lib/"
+  ],
   "engines": {
     "node": ">=8"
   },
-  "author": "Ludovic Cluber",
+  "author": {
+    "name": "Ludovic Cluber",
+    "email": "http://www.lcluber.com/contact",
+    "url": "http://www.lcluber.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LCluber/Mouette.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LCluber/FrameRat.js/issues",
+    "email": ""
+  },
   "license": "MIT",
   "dependencies": {
     "current-git-branch": "1.1.0"
