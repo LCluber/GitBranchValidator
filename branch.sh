@@ -3,7 +3,7 @@ LC_ALL=C
 
 local_branch="$(git rev-parse --abbrev-ref HEAD)"
 
-valid_branch_regex="^(feature|bugfix|release|hotfix|refactor|test|doc)\/([a-z0-9_#-]){3,40}$"
+valid_branch_regex="^(feature|bugfix|release|hotfix|refactor|test|doc)\/([a-z0-9_#-.\/]){3,40}$"
 
 if [[ ! $local_branch =~ $valid_branch_regex ]]
 then

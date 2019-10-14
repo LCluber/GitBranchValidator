@@ -1,5 +1,5 @@
-[![License: MIT](https://img.shields.io/npm/l/@lcluber/chjs.svg)](https://opensource.org/licenses/MIT)
-[![npm version](https://badge.fury.io/js/%40lcluber%2Fchjs.svg)](https://www.npmjs.com/package/@lcluber/chjs)
+[![License: MIT](https://img.shields.io/npm/l/@lcluber/gitbranchvalidator.svg)](https://opensource.org/licenses/MIT)
+[![npm version](https://badge.fury.io/js/%40lcluber%2Fgitbranchvalidator.svg)](https://www.npmjs.com/package/@lcluber/gitbranchvalidator)
 ![Jest:coverage](https://img.shields.io/badge/Jest:coverage-100%25-brightgreen.svg)
 
 - [Synopsis](#synopsis)
@@ -18,122 +18,45 @@
 
 ## Synopsis
 
-**[Ch.js](https://github.com/LCluber/Ch.js)** is an open source type checking library for Javascript.
+**[GitBranchValidator](https://github.com/LCluber/GitBranchValidator)** is an open source git branch name validator library for npm.
 
 ## Motivation
 
-The goal of this library is to provide an easy way to check if a variable is what it is supposed to be. Function, object, ascii, boolean, integer, string, json...
+The goal of this library is to provide an easy way to check if the current branch name is valid.
 
 ## Installation
 
 ### npm
 
 ```bash
-$ npm i @lcluber/chjs
+$ npm i @lcluber/gitbranchvalidator -g
 ```
 
 ### Yarn
 
 ```bash
-$ yarn add @lcluber/chjs
+$ yarn add @lcluber/gitbranchvalidator -g
 ```
 
 ## Usage
 
-### ES6
+### Husky
 
-```javascript
-import { isFunction, isArray } from "@lcluber/chjs";
+```json
 
-if (isFunction(variable)) {
-  //variable is a function
-}
-
-if (!isArray(variable)) {
-  //variable is not an array
-}
 ```
 
-### CommonJS
-
-```javascript
-const ch = require("@lcluber/chjs/dist/ch.cjs");
-
-if (ch.isFunction(variable)) {
-  //variable is a function
-}
-
-if (!ch.isArray(variable)) {
-  //variable is not an array
-}
-```
-
-### IIFE
-
-```html
-<script src="node-modules/@lcluber/chjs/dist/ch.iife.min.js"></script>
-```
-
-```javascript
-if (Ch.isFunction(variable)) {
-  //variable is a function
-}
-
-if (!Ch.isArray(variable)) {
-  //variable is not an array
-}
-```
-
-## API Reference
-
-```javascript
-isBoolean(bool: any): boolean {}
-
-isJson(string: any): boolean {}
-
-isFunction(func: any): boolean {}
-
-isObject(object: any): boolean {}
-
-isArray(array: any): boolean {}
-
-isAscii(code: any, extended: boolean = false): boolean {}
-
-isInteger(number: any, typeCheck: boolean = true): boolean {}
-
-isFloat(number: any, typeCheck: boolean = true): boolean {}
-
-isNumber(number: any): boolean {}
-
-isString(string: any): boolean {}
-
-isHtmlElement(htmlElement: any): boolean {}
-
-isHtmlEventAttribute(htmlEventAttribute: any): boolean {}
-
-isNode(node: any): boolean {}
-
-isEven(number: any): boolean {}
-
-isOdd(number: any): boolean {}
-
-isOrigin(number: any): boolean {}
-
-isPositive(number: any): boolean {}
-
-isNegative(number: any): boolean {}
-```
 
 ## Contributors
 
-Ch.js is still in development and I would be glad to get all the help you can provide for this project.
+GitBranchValidator is still in development and I would be glad to get all the help you can provide for this project.
 To contribute you can please read :
 
-- **[NOTICE.md](https://github.com/LCluber/Ch.js/blob/master/NOTICE.md)** for detailed installation guide.
+- **[NOTICE.md](https://github.com/LCluber/GitBranchValidator/blob/master/NOTICE.md)** for detailed installation guide.
 
 ## License
 
-**[MIT](https://github.com/LCluber/Ch.js/blob/master/LICENSE.md)**
+**[MIT](https://github.com/LCluber/GitBranchValidator/blob/master/LICENSE.md)**
 
 ## Stack
 
