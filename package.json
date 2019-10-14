@@ -12,7 +12,7 @@
     "pre push",
     "pre commit"
   ],
-  "homepage": "http://frameratjs.lcluber.com",
+  "homepage": "https://github.com/LCluber/GitBranchValidator",
   "main": "./lib/validate.js",
   "bin": {
     "gbvalidator": "./bin/index.js"
@@ -35,10 +35,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/LCluber/Mouette.js.git"
+    "url": "https://github.com/LCluber/GitBranchValidator.git"
   },
   "bugs": {
-    "url": "https://github.com/LCluber/FrameRat.js/issues",
+    "url": "https://github.com/LCluber/GitBranchValidator/issues",
     "email": ""
   },
   "license": "MIT",
