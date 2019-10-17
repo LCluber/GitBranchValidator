@@ -8,8 +8,8 @@
   - [npm](#npm)
   - [Yarn](#yarn)
 - [Usage](#usage)
-  - [ES6](#es6)
-  - [CommonJS](#commonjs)
+  - [Node.js](#node.js)
+  - [Husky](#husky)
   - [IIFE](#iife)
 - [API Reference](#api-reference)
 - [Contributors](#contributors)
@@ -40,12 +40,31 @@ $ yarn add @lcluber/gitbranchvalidator -g
 
 ## Usage
 
-### Husky
+### Node.js
 
-```json
-
+```bash
+$ cd <git-project>
+$ gbvalidator "<optional-custom-regex>"
 ```
 
+### Husky
+
+Validate branch name on pre-commit with Husky
+
+```bash
+$ npm install husky --save-dev
+```
+
+```json
+// package.json
+{
+  "husky": {
+    "hooks": {
+      "pre-commit": "gbvalidator \"<optional-custom-regex>\""
+    }
+  }
+}
+```
 
 ## Contributors
 

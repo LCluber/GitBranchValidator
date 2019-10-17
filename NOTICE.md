@@ -7,13 +7,13 @@
 - Clone the project :
 
   ```bash
-  $ git clone https://github.com/LCluber/Ch.js.git
+  $ git clone https://github.com/LCluber/GitBranchValidator
   ```
 
 - Install global dependencies :
 
   ```bash
-  $ npm i -g typescript rollup uglify-js jest commitizen semantic-release-cli rimraf
+  $ npm i -g jest commitizen semantic-release-cli
   ```
 
 - Install project dependencies :
@@ -39,7 +39,7 @@
   $ npm run test
   ```
 
-- commit your following [conventional commits rules](https://github.com/LCluber/LeadDevToolkit/blob/master/COMMIT.md) :
+- commit your work following [conventional commits rules](https://github.com/LCluber/LeadDevToolkit/blob/master/COMMIT.md) :
 
   ```bash
   $ npm run commit
@@ -49,17 +49,15 @@
 
 ## Folders
 
-- dist/
-- src/
+- bin/
+- lib/
 - tests/
 
 ## Stack
 
-| Purpose         |                    Choice                    |                                                                                Motivation |
-| :-------------- | :------------------------------------------: | ----------------------------------------------------------------------------------------: |
-| repository      |        [Github](https://github.com/)         | the world’s largest community of developers to discover, share, and build better software |
-| package manager |     [npm](https://www.npmjs.com/get-npm)     |                                                           default node.js package manager |
-| type checking   | [TypeScript](https://www.typescriptlang.org) |                            static type checking along with the latest ECMAScript features |
-| module bundler  |      [Rollup.js](https://rollupjs.org)       |                                                   advanced module bundler for ES6 modules |
-| unit testing    |          [Jest](https://jestjs.io/)          |                                             delightful testing with a focus on simplicity |
-| deployment      |       [Travis](https://travis-ci.com/)       |                                                           test and deploy with confidence |
+| Purpose         |                Choice                |                                        Motivation                                         |
+| :-------------- | :----------------------------------: | :---------------------------------------------------------------------------------------: |
+| repository      |    [Github](https://github.com/)     | the world’s largest community of developers to discover, share, and build better software |
+| package manager | [npm](https://www.npmjs.com/get-npm) |                              default node.js package manager                              |
+| unit testing    |      [Jest](https://jestjs.io/)      |                       delightful testing with a focus on simplicity                       |
+| deployment      |   [Travis](https://travis-ci.com/)   |                              test and deploy with confidence                              |

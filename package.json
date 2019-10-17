@@ -1,6 +1,6 @@
 {
   "name": "@lcluber/gitbranchvalidator",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "git branch name validator",
   "keywords": [
     "branch name",
@@ -41,16 +41,17 @@
     "url": "https://github.com/LCluber/GitBranchValidator/issues",
     "email": ""
   },
-  "license": "MIT",
-  "dependencies": {
-    "current-git-branch": "1.1.0"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged && npm run test",
       "commit-msg": "",
       "pre-push": ""
     }
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@lcluber/chjs": "2.9.0",
+    "current-git-branch": "1.1.0"
   },
   "devDependencies": {
     "husky": "3.0.9",
