@@ -10,8 +10,6 @@
 - [Usage](#usage)
   - [Node.js](#node.js)
   - [Husky](#husky)
-  - [IIFE](#iife)
-- [API Reference](#api-reference)
 - [Contributors](#contributors)
 - [License](#license)
 - [Stack](#stack)
