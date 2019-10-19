@@ -9,7 +9,8 @@
   - [Yarn](#yarn)
 - [Usage](#usage)
   - [Node.js](#node.js)
-  - [Husky](#husky)
+  - [Pattern](#pattern)
+  - [Workflow](#workflow)
 - [Contributors](#contributors)
 - [License](#license)
 - [Stack](#stack)
@@ -42,12 +43,23 @@ $ yarn add @lcluber/gitbranchvalidator -g
 
 ```bash
 $ cd <git-project>
+$ gbvalidator
+```
+
+### Pattern
+
+- Default : **/^(feature|bugfix|release|hotfix|refactor|test|doc)\/([a-z0-9_#-\.\/]){3,40}$/**
+
+You can use your own custom pattern by adding an optional regexp : 
+
+```bash
+$ cd <git-project>
 $ gbvalidator "<optional-custom-regex>"
 ```
 
-### Husky
+### Workflow
 
-Validate branch name on pre-commit with Husky
+Validate branch name on pre-commit with Husky :
 
 ```bash
 $ npm install husky --save-dev
@@ -62,14 +74,13 @@ $ npm install husky --save-dev
     }
   }
 }
+
 ```
 
 ## Contributors
 
 GitBranchValidator is still in development and I would be glad to get all the help you can provide for this project.
-To contribute you can please read :
-
-- **[NOTICE.md](https://github.com/LCluber/GitBranchValidator/blob/master/NOTICE.md)** for detailed installation guide.
+To contribute please read **[NOTICE.md](https://github.com/LCluber/GitBranchValidator/blob/master/NOTICE.md)** for detailed installation guide.
 
 ## License
 
@@ -81,6 +92,5 @@ To contribute you can please read :
 | :-------------- | :------------------------------------------: | -------------------------------------------------------------: |
 | repository      |        [Github](https://github.com/)         |     hosting for software development version control using Git |
 | package manager |     [npm](https://www.npmjs.com/get-npm)     |                                default node.js package manager |
-| module bundler  |      [Rollup.js](https://rollupjs.org)       |                        advanced module bundler for ES6 modules |
 | unit testing    |          [Jest](https://jestjs.io/)          |                  delightful testing with a focus on simplicity |
 | deployment      |       [Travis](https://travis-ci.com/)       |                                test and deploy with confidence |

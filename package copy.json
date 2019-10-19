@@ -20,7 +20,7 @@
   "preferGlobal": true,
   "scripts": {
     "test": "jest --coverage",
-    "pretty": "prettier --check 'lib/*.js' 'bin/*.js' --write",
+    "pretty": "prettier --check 'src/ts/*.ts' --write",
     "commit": "git-cz",
     "semantic-release": "semantic-release"
   },
