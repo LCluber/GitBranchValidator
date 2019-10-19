@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/LCluber/GitBranchValidator/compare/v1.1.0...v1.1.1) (2019-10-19)
+
+
+### Bug Fixes
+
+* **package:** updated description ([190fdbb](https://github.com/LCluber/GitBranchValidator/commit/190fdbbec39232fbc14fcf6b4233b031b6ee6f82))
+
 # [1.1.0](https://github.com/LCluber/GitBranchValidator/compare/v1.0.0...v1.1.0) (2019-10-19)
 
 
