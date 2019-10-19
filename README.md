@@ -21,7 +21,13 @@
 
 ## Motivation
 
-The goal of this library is to provide an easy way to check if the current branch name is valid.
+The goal of this library is to provide an easy way to check if the current branch name is valid before pushing it to the remote.
+
+It's a good way to help developers keep their branch names clean on the repository and facilitate the workflow of a project with strict naming rules.
+
+The default pattern follows the principles described here : **[https://github.com/LCluber/LeadDevToolkit/blob/master/git/BRANCH.md](https://github.com/LCluber/LeadDevToolkit/blob/master/git/BRANCH.md)**
+
+But you can set your own rules using a [custom pattern](#pattern).
 
 ## Installation
 
