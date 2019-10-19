@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/LCluber/GitBranchValidator/compare/v1.0.0...v1.1.0) (2019-10-19)
+
+
+### Features
+
+* **logs:** improved logs on custom pattern errors ([e53f43b](https://github.com/LCluber/GitBranchValidator/commit/e53f43ba360bb399f16c7df7a894a1aee3a8d46b))
+
 # 1.0.0 (2019-10-19)
 
 
