@@ -2,4 +2,3 @@
 node_modules/
 tests/coverage/
 npm-debug.log
-package-lock.json
