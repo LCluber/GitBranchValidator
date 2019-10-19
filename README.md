@@ -17,7 +17,7 @@
 
 ## Synopsis
 
-**[GitBranchValidator](https://github.com/LCluber/GitBranchValidator)** is an open source git branch name validator library for npm.
+**[GitBranchValidator](https://github.com/LCluber/GitBranchValidator)** is an open source git branch name validator library.
 
 ## Motivation
 
