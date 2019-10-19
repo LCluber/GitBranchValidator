@@ -10,12 +10,6 @@
   $ git clone https://github.com/LCluber/GitBranchValidator
   ```
 
-- Install global dependencies :
-
-  ```bash
-  $ npm i -g jest commitizen semantic-release-cli
-  ```
-
 - Install project dependencies :
 
   ```bash

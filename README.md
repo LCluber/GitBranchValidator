@@ -7,10 +7,11 @@
 - [Installation](#installation)
   - [npm](#npm)
   - [Yarn](#yarn)
+  - [Local](#local)
 - [Usage](#usage)
-  - [Node.js](#node.js)
+  - [Command line](#command-line)
   - [Pattern](#pattern)
-  - [Workflow](#workflow)
+  - [Workflow integration](#workflow-integration)
 - [Contributors](#contributors)
 - [License](#license)
 - [Stack](#stack)
@@ -25,7 +26,7 @@ The goal of this library is to provide an easy way to check if the current branc
 
 It's a good way to help developers keep their branch names clean on the repository and facilitate the workflow of a project with strict naming rules.
 
-The default pattern follows the principles described here : **[https://github.com/LCluber/LeadDevToolkit/blob/master/git/BRANCH.md](https://github.com/LCluber/LeadDevToolkit/blob/master/git/BRANCH.md)**
+The default pattern follows the principles described [here](https://github.com/LCluber/LeadDevToolkit/blob/master/git/BRANCH.md).
 
 But you can set your own rules using a [custom pattern](#pattern).
 
@@ -43,13 +44,42 @@ $ npm i @lcluber/gitbranchvalidator -g
 $ yarn add @lcluber/gitbranchvalidator -g
 ```
 
+### Local
+
+Alternatively, if you are planning to use GitBranchValidator within your npm package only or with npx you can install it as a devDependency in your project.
+
+```bash
+$ npm i @lcluber/gitbranchvalidator --save-dev
+```
+
+```bash
+$ yarn add @lcluber/gitbranchvalidator --dev
+```
+
 ## Usage
 
-### Node.js
+### Command line
 
 ```bash
 $ cd <git-project>
 $ gbvalidator
+```
+
+Alternatively if you did not install GitBranchValidator globally you can use npx.
+
+```bash
+$ npx gbvalidator
+```
+
+Or as an npm script in your package.
+
+```json
+// package.json
+{
+  "scripts": {
+    "commit": "gbvalidator"
+  }
+}
 ```
 
 ### Pattern
@@ -60,10 +90,10 @@ You can use your own custom pattern by adding an optional regexp :
 
 ```bash
 $ cd <git-project>
-$ gbvalidator "<optional-custom-regex>"
+$ gbvalidator "^(feature|bugfix|release|hotfix)\/([a-z0-9_#-\.\/]){3,50}$"
 ```
 
-### Workflow
+### Workflow integration
 
 Validate branch name on pre-commit with Husky :
 
@@ -76,12 +106,12 @@ $ npm install husky --save-dev
 {
   "husky": {
     "hooks": {
-      "pre-commit": "gbvalidator \"<optional-custom-regex>\""
+      "pre-commit": "gbvalidator \"^(feature|bugfix|release|hotfix)\/([a-z0-9_#-\\.\/]){3,50}$\""
     }
   }
 }
-
 ```
+*You may need to properly escape your regex in order to get a valid JSON file.*
 
 ## Contributors
 
