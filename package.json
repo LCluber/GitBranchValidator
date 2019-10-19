@@ -1,6 +1,6 @@
 {
   "name": "@lcluber/gitbranchvalidator",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "git branch name validator",
   "keywords": [
     "branch name",
