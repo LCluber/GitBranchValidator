@@ -1,4 +1,4 @@
 
-# 0.1.0 (December 23th 2018)
+# 0.1.0 (October 19th 2019)
 
 - Initial release
