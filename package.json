@@ -1,7 +1,7 @@
 {
   "name": "@lcluber/gitbranchvalidator",
   "version": "1.1.0",
-  "description": "Git branch name validator on git hooks for clean workflow",
+  "description": "Git branch name validator on Git hooks for clean workflow",
   "keywords": [
     "branch name",
     "branch",

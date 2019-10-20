@@ -84,9 +84,9 @@ Or as an npm script in your package.
 
 ### Pattern
 
-- Default : **/^(feature|bugfix|release|hotfix|refactor|test|doc)\/([a-z0-9_#-\.\/]){3,40}$/**
+- Default : **/^(feature|bugfix|release|hotfix|refactor|test|doc|build)\/([a-z0-9_#-\.\/]){3,40}\$/**
 
-You can use your own custom pattern by adding an optional regexp : 
+You can use your own custom pattern by adding an optional regexp :
 
 ```bash
 $ cd <git-project>
@@ -106,12 +106,13 @@ $ npm install husky --save-dev
 {
   "husky": {
     "hooks": {
-      "pre-commit": "gbvalidator \"^(feature|bugfix|release|hotfix)\/([a-z0-9_#-\\.\/]){3,50}$\""
+      "pre-commit": "gbvalidator \"^(feature|bugfix|release|hotfix)/([a-z0-9_#-\\./]){3,50}$\""
     }
   }
 }
 ```
-*You may need to properly escape your regex in order to get a valid JSON file.*
+
+_You may need to properly escape your regex in order to get a valid JSON file._
 
 ## Contributors
 
@@ -124,9 +125,9 @@ To contribute please read **[NOTICE.md](https://github.com/LCluber/GitBranchVali
 
 ## Stack
 
-| Purpose         |                    Choice                    |                                                     Motivation |
-| :-------------- | :------------------------------------------: | -------------------------------------------------------------: |
-| repository      |        [Github](https://github.com/)         |     hosting for software development version control using Git |
-| package manager |     [npm](https://www.npmjs.com/get-npm)     |                                default node.js package manager |
-| unit testing    |          [Jest](https://jestjs.io/)          |                  delightful testing with a focus on simplicity |
-| deployment      |       [Travis](https://travis-ci.com/)       |                                test and deploy with confidence |
+| Purpose         |                Choice                |                                                 Motivation |
+| :-------------- | :----------------------------------: | ---------------------------------------------------------: |
+| repository      |    [Github](https://github.com/)     | hosting for software development version control using Git |
+| package manager | [npm](https://www.npmjs.com/get-npm) |                            default node.js package manager |
+| unit testing    |      [Jest](https://jestjs.io/)      |              delightful testing with a focus on simplicity |
+| deployment      |   [Travis](https://travis-ci.com/)   |                            test and deploy with confidence |
