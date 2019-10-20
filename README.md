@@ -86,6 +86,8 @@ Or as an npm script in your package.
 
 - Default : **/^(feature|bugfix|release|hotfix|refactor|test|doc|build)\/([a-z0-9_#-\.\/]){3,40}\$/**
 
+The default pattern follows the principles described [here](https://github.com/LCluber/LeadDevToolkit/blob/master/git/BRANCH.md).
+
 You can use your own custom pattern by adding an optional regexp :
 
 ```bash
