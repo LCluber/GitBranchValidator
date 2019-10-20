@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/LCluber/GitBranchValidator/compare/v1.1.1...v1.2.0) (2019-10-20)
+
+
+### Features
+
+* **pattern:** added build branch to default pattern ([dd4b458](https://github.com/LCluber/GitBranchValidator/commit/dd4b4582c2fcc5d8d09c2dd1611ddcaf4efbc5cf))
+
 ## [1.1.1](https://github.com/LCluber/GitBranchValidator/compare/v1.1.0...v1.1.1) (2019-10-19)
 
 ### Bug Fixes
