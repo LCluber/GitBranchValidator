@@ -30,6 +30,7 @@
  * send your own regex pattern
  *
  * @param {customPattern} String regex to validate
+ * @param {customMessage} String personalized end message
  */
 
 // Delete the 0 and 1 argument (node and script.js)
@@ -37,7 +38,8 @@ let args = process.argv.splice(process.execArgv.length + 2);
 
 // Retrieve the first argument
 const customPattern = args[0];
+const customMessage = args[1];
 
 const validator = require("../lib/main.js");
 
-validator.test(customPattern);
+validator.test(customPattern, customMessage);

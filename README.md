@@ -26,7 +26,7 @@ The goal of this library is to provide an easy way to check if the current branc
 
 It's a good way to help developers keep their branch names clean on the repository and facilitate the workflow of a project with strict naming rules.
 
-The default pattern follows the principles described [here](https://github.com/LCluber/LeadDevToolkit/blob/master/git/BRANCH.md).
+The default pattern follows the principles described [here](https://lcluber.github.io/LeadDevToolkit/git/BRANCH.html).
 
 But you can set your own rules using a [custom pattern](#pattern).
 
@@ -86,7 +86,7 @@ Or as an npm script in your package.
 
 - Default : **/^(feature|bugfix|release|hotfix|refactor|test|doc|build)\/([a-z0-9_#-\.\/]){3,40}\$/**
 
-The default pattern follows the principles described [here](https://github.com/LCluber/LeadDevToolkit/blob/master/git/BRANCH.md).
+The default pattern follows the principles described [here](https://lcluber.github.io/LeadDevToolkit/git/BRANCH.html).
 
 You can use your own custom pattern by adding an optional regexp :
 
