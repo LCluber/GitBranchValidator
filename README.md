@@ -92,7 +92,16 @@ You can use your own custom pattern by adding an optional regexp :
 
 ```bash
 $ cd <git-project>
-$ gbvalidator "^(feature|bugfix|release|hotfix)\/([a-z0-9_#-\.\/]){3,50}$"
+$ gbvalidator --pattern "^(feature|bugfix|release|hotfix)\/([a-z0-9_#-\.\/]){3,50}$"
+```
+
+### Message
+
+You can use add a custom message at the end of the error messages by adding an optional message :
+
+```bash
+$ cd <git-project>
+$ gbvalidator --message "You can learn more about branch name convention on https://lcluber.github.io/LeadDevToolkit/git/BRANCH.html"
 ```
 
 ### Workflow integration
@@ -108,13 +117,20 @@ $ npm install husky --save-dev
 {
   "husky": {
     "hooks": {
-      "pre-commit": "gbvalidator \"^(feature|bugfix|release|hotfix)/([a-z0-9_#-\\./]){3,50}$\""
+      "pre-commit": "gbvalidator"
     }
   }
 }
 ```
 
 _You may need to properly escape your regex in order to get a valid JSON file._
+
+## options
+
+| Option    | Alias |                                             description |
+| :-------- | :---: | ------------------------------------------------------: |
+| --pattern |  -p   |                                   To use a custom regex |
+| --message |  -m   | To add a custom message at the end of the error message |
 
 ## Contributors
 

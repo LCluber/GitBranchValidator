@@ -33,13 +33,28 @@
  * @param {customMessage} String personalized end message
  */
 
-// Delete the 0 and 1 argument (node and script.js)
-let args = process.argv.splice(process.execArgv.length + 2);
-
-// Retrieve the first argument
-const customPattern = args[0];
-const customMessage = args[1];
-
+const commandLineArgs = require("command-line-args");
 const validator = require("../lib/main.js");
 
-validator.test(customPattern, customMessage);
+const optionDefinitions = [
+  // { name: 'verbose', alias: 'v', type: Boolean },
+  {
+    name: "pattern",
+    alias: "p",
+    type: String,
+    multiple: false,
+    defaultOption: true
+  },
+  { name: "message", alias: "m", type: String, multiple: false }
+];
+
+const options = commandLineArgs(optionDefinitions);
+
+// // Delete the 0 and 1 argument (node and script.js)
+// let args = process.argv.splice(process.execArgv.length + 2);
+
+// // Retrieve the first argument
+// const customPattern = args[0];
+// const customMessage = args[1];
+
+validator.test(options.pattern, options.message);

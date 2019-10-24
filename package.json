@@ -59,6 +59,7 @@
   "license": "MIT",
   "dependencies": {
     "@lcluber/chjs": "2.9.0",
+    "command-line-args": "5.1.1",
     "current-git-branch": "1.1.0"
   },
   "devDependencies": {
