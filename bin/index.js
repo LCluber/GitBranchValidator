@@ -34,27 +34,57 @@
  */
 
 const commandLineArgs = require("command-line-args");
+const commandLineUsage = require("command-line-usage");
 const validator = require("../lib/main.js");
 
 const optionDefinitions = [
-  // { name: 'verbose', alias: 'v', type: Boolean },
   {
     name: "pattern",
     alias: "p",
     type: String,
     multiple: false,
-    defaultOption: true
+    description: "Use a custom regex to validate project branch names."
   },
-  { name: "message", alias: "m", type: String, multiple: false }
+  {
+    name: "message",
+    alias: "m",
+    type: String,
+    multiple: false,
+    description:
+      "Use a custom message at the end of the error message. Like more help to understand your Gitflow."
+  },
+  {
+    name: "help",
+    alias: "h",
+    type: Boolean,
+    description: "Display this usage guide."
+  }
 ];
 
 const options = commandLineArgs(optionDefinitions);
 
-// // Delete the 0 and 1 argument (node and script.js)
-// let args = process.argv.splice(process.execArgv.length + 2);
+const sections = [
+  {
+    header: "GitBranchValidator",
+    content: "Generates something {italic very} important."
+  },
+  {
+    header: "Options",
+    optionList: optionDefinitions,
+    content:
+      "Project home: {underline https://github.com/LCluber/GitBranchValidator}"
+  }
+];
+const usage = commandLineUsage(sections);
 
-// // Retrieve the first argument
-// const customPattern = args[0];
-// const customMessage = args[1];
+if (options.help) {
+  console.log(usage);
+} else {
+  // // Delete the 0 and 1 argument (node and script.js)
+  // let args = process.argv.splice(process.execArgv.length + 2);
 
-validator.test(options.pattern, options.message);
+  // // Retrieve the first argument
+  // const customPattern = args[0];
+  // const customMessage = args[1];
+  validator.test(options.pattern, options.message);
+}
