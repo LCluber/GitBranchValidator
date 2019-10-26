@@ -44,7 +44,7 @@ $ npm i @lcluber/gitbranchvalidator -g
 $ yarn add @lcluber/gitbranchvalidator -g
 ```
 
-### Local
+### Locally
 
 Alternatively, if you are planning to use GitBranchValidator within your npm package only or with npx you can install it as a devDependency in your project.
 
@@ -92,12 +92,14 @@ You can use your own custom pattern by adding an optional regexp :
 
 ```bash
 $ cd <git-project>
-$ gbvalidator --pattern "^(feature|bugfix|release|hotfix)\/([a-z0-9_#-\.\/]){3,50}$"
+$ gbvalidator --pattern "^(feat|fix)\/([a-z0-9_#-\.\/]){3,50}$"
 ```
+
+_You may need to properly escape your regex in order to get a valid JSON file._
 
 ### Message
 
-You can use add a custom message at the end of the error messages by adding an optional message :
+You can add a custom message at the end of the error messages by adding an optional message :
 
 ```bash
 $ cd <git-project>
@@ -123,14 +125,13 @@ $ npm install husky --save-dev
 }
 ```
 
-_You may need to properly escape your regex in order to get a valid JSON file._
-
 ## options
 
 | Option    | Alias |                                             description |
 | :-------- | :---: | ------------------------------------------------------: |
 | --pattern |  -p   |                                   To use a custom regex |
 | --message |  -m   | To add a custom message at the end of the error message |
+| --help    |  -h   |                            To learn about library usage |
 
 ## Contributors
 
