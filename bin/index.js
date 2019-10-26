@@ -51,7 +51,7 @@ const optionDefinitions = [
     type: String,
     multiple: false,
     description:
-      "Use a custom message at the end of the error message. Like more help to understand your Gitflow."
+      "Use a custom message at the end of the error message. For example a link to help understand your custom Gitflow."
   },
   {
     name: "help",
@@ -63,10 +63,10 @@ const optionDefinitions = [
 
 const options = commandLineArgs(optionDefinitions);
 
-const sections = [
+const usageSections = [
   {
     header: "GitBranchValidator",
-    content: "Generates something {italic very} important."
+    content: "Git branch name validator on Git hooks for clean workflow."
   },
   {
     header: "Options",
@@ -75,16 +75,8 @@ const sections = [
       "Project home: {underline https://github.com/LCluber/GitBranchValidator}"
   }
 ];
-const usage = commandLineUsage(sections);
+const usage = commandLineUsage(usageSections);
 
-if (options.help) {
-  console.log(usage);
-} else {
-  // // Delete the 0 and 1 argument (node and script.js)
-  // let args = process.argv.splice(process.execArgv.length + 2);
-
-  // // Retrieve the first argument
-  // const customPattern = args[0];
-  // const customMessage = args[1];
-  validator.test(options.pattern, options.message);
-}
+options.help
+  ? console.log(usage)
+  : validator.test(options.pattern, options.message);
