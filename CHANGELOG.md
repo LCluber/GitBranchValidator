@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/LCluber/GitBranchValidator/compare/v1.2.0...v1.3.0) (2019-10-26)
+
+
+### Features
+
+* **usage:** add --help option to see library usage ([f7f8f25](https://github.com/LCluber/GitBranchValidator/commit/f7f8f25091f93422708573bce9e40c6592901ed1))
+
 # [1.2.0](https://github.com/LCluber/GitBranchValidator/compare/v1.1.1...v1.2.0) (2019-10-20)
 
 
