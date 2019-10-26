@@ -21,10 +21,10 @@
 
 - create a branch following [these instructions](https://github.com/LCluber/LeadDevToolkit/blob/master/BRANCH.md)
 
-- build the library :
+- run the library :
 
   ```bash
-  $ npm run build
+  $ node ./bin
   ```
 
 - test the library :
