@@ -127,11 +127,11 @@ $ npm install husky --save-dev
 
 ## options
 
-| Option    | Alias |                                             description |
-| :-------- | :---: | ------------------------------------------------------: |
-| --pattern |  -p   |                                   To use a custom regex |
-| --message |  -m   | To add a custom message at the end of the error message |
-| --help    |  -h   |                            To learn about library usage |
+| Option    | Alias |  Type   |                       description                       |
+| :-------- | :---: | :-----: | :-----------------------------------------------------: |
+| --pattern |  -p   | string  |                  to use a custom regex                  |
+| --message |  -m   | string  | to add a custom message at the end of the error message |
+| --help    |  -h   | boolean |              to learn about library usage               |
 
 ## Contributors
 
