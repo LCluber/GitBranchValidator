@@ -95,7 +95,7 @@ $ cd <git-project>
 $ gbvalidator --pattern "^(feat|fix)\/([a-z0-9_#-\.\/]){3,50}$"
 ```
 
-_You may need to properly escape your regex in order to get a valid JSON file._
+_If you use this option on package.json in a npm command, you may need to properly escape your regex in order to get a valid JSON file._
 
 ### Message
 
@@ -103,7 +103,7 @@ You can add a custom message at the end of the error messages by adding an optio
 
 ```bash
 $ cd <git-project>
-$ gbvalidator --message "You can learn more about branch name convention on https://lcluber.github.io/LeadDevToolkit/git/BRANCH.html"
+$ gbvalidator --message "You can learn more about branch name conventions of this project on https://lcluber.github.io/LeadDevToolkit/git/BRANCH.html"
 ```
 
 ### Workflow integration
