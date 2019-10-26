@@ -26,7 +26,7 @@ The goal of this library is to provide an easy way to check if the current branc
 
 It's a good way to help developers keep their branch names clean on the repository and facilitate the workflow of a project with strict naming rules.
 
-The default pattern follows the principles described [here](https://github.com/LCluber/LeadDevToolkit/blob/master/git/BRANCH.md).
+The default pattern follows the principles described [here](https://lcluber.github.io/LeadDevToolkit/git/BRANCH.html).
 
 But you can set your own rules using a [custom pattern](#pattern).
 
@@ -44,7 +44,7 @@ $ npm i @lcluber/gitbranchvalidator -g
 $ yarn add @lcluber/gitbranchvalidator -g
 ```
 
-### Local
+### Locally
 
 Alternatively, if you are planning to use GitBranchValidator within your npm package only or with npx you can install it as a devDependency in your project.
 
@@ -86,13 +86,24 @@ Or as an npm script in your package.
 
 - Default : **/^(feature|bugfix|release|hotfix|refactor|test|doc|build)\/([a-z0-9_#-\.\/]){3,40}\$/**
 
-The default pattern follows the principles described [here](https://github.com/LCluber/LeadDevToolkit/blob/master/git/BRANCH.md).
+The default pattern follows the principles described [here](https://lcluber.github.io/LeadDevToolkit/git/BRANCH.html).
 
 You can use your own custom pattern by adding an optional regexp :
 
 ```bash
 $ cd <git-project>
-$ gbvalidator "^(feature|bugfix|release|hotfix)\/([a-z0-9_#-\.\/]){3,50}$"
+$ gbvalidator --pattern "^(feat|fix)\/([a-z0-9_#-\.\/]){3,50}$"
+```
+
+_If you use this option for a npm command in package.json, you may need to properly escape your regex in order to get a valid JSON file._
+
+### Message
+
+You can customize the end of the error message :
+
+```bash
+$ cd <git-project>
+$ gbvalidator --message "You can learn more about branch name conventions of this project on https://lcluber.github.io/LeadDevToolkit/git/BRANCH.html"
 ```
 
 ### Workflow integration
@@ -108,13 +119,19 @@ $ npm install husky --save-dev
 {
   "husky": {
     "hooks": {
-      "pre-commit": "gbvalidator \"^(feature|bugfix|release|hotfix)/([a-z0-9_#-\\./]){3,50}$\""
+      "pre-commit": "gbvalidator"
     }
   }
 }
 ```
 
-_You may need to properly escape your regex in order to get a valid JSON file._
+## options
+
+| Option    | Alias |  Type   |                                             description |
+| :-------- | :---: | :-----: | ------------------------------------------------------: |
+| --pattern |  -p   | string  |                                   to use a custom regex |
+| --message |  -m   | string  | to add a custom message at the end of the error message |
+| --help    |  -h   | boolean |                            to learn about library usage |
 
 ## Contributors
 

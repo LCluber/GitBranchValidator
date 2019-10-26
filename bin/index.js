@@ -30,14 +30,53 @@
  * send your own regex pattern
  *
  * @param {customPattern} String regex to validate
+ * @param {customMessage} String personalized end message
  */
 
-// Delete the 0 and 1 argument (node and script.js)
-let args = process.argv.splice(process.execArgv.length + 2);
-
-// Retrieve the first argument
-const customPattern = args[0];
-
+const commandLineArgs = require("command-line-args");
+const commandLineUsage = require("command-line-usage");
 const validator = require("../lib/main.js");
 
-validator.test(customPattern);
+const optionDefinitions = [
+  {
+    name: "pattern",
+    alias: "p",
+    type: String,
+    multiple: false,
+    description: "Use a custom regex to validate project branch names."
+  },
+  {
+    name: "message",
+    alias: "m",
+    type: String,
+    multiple: false,
+    description:
+      "Use a custom message at the end of the error message. For example a link to help understand your custom Gitflow."
+  },
+  {
+    name: "help",
+    alias: "h",
+    type: Boolean,
+    description: "Display this usage guide."
+  }
+];
+
+const options = commandLineArgs(optionDefinitions);
+
+const usageSections = [
+  {
+    header: "GitBranchValidator",
+    content: "Git branch name validator on Git hooks for clean workflow."
+  },
+  {
+    header: "Options",
+    optionList: optionDefinitions,
+    content:
+      "Project home: {underline https://github.com/LCluber/GitBranchValidator}"
+  }
+];
+const usage = commandLineUsage(usageSections);
+
+options.help
+  ? console.log(usage)
+  : validator.test(options.pattern, options.message);
