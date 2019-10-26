@@ -99,7 +99,7 @@ _If you use this option for a npm command in package.json, you may need to prope
 
 ### Message
 
-You can add a custom message at the end of the error messages by adding an optional message :
+You can customize the end of the error message :
 
 ```bash
 $ cd <git-project>
