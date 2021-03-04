@@ -1,3 +1,8 @@
+Version 1.4.0 (March 04th 2021)
+-----------------------------
+- Prompt if branch name is not valid. So user can continue anyway
+
+
 # [1.3.0](https://github.com/LCluber/GitBranchValidator/compare/v1.2.0...v1.3.0) (2019-10-26)
 
 
