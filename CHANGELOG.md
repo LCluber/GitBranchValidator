@@ -1,3 +1,8 @@
+Version 1.4.1 (August 17th 2022)
+-----------------------------
+- Project transferred from LCluber account to DWTechs organization
+- Update readme file to inform about the transfer and fix broken links
+
 Version 1.4.0 (March 04th 2021)
 -----------------------------
 - Prompt if branch name is not valid. So user can continue anyway

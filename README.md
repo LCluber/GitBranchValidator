@@ -1,3 +1,8 @@
+### This project has been transferred to [DWTechs](https://github.com/DWTechs/GitBranchValidator). 
+
+### Please update your project dependencies to the latest version [on the new repository](https://github.com/DWTechs/GitBranchValidator).
+
+
 [![License: MIT](https://img.shields.io/npm/l/@lcluber/gitbranchvalidator.svg)](https://opensource.org/licenses/MIT)
 [![npm version](https://badge.fury.io/js/%40lcluber%2Fgitbranchvalidator.svg)](https://www.npmjs.com/package/@lcluber/gitbranchvalidator)
 ![Jest:coverage](https://img.shields.io/badge/Jest:coverage-100%25-brightgreen.svg)
@@ -26,9 +31,9 @@ The goal of this library is to provide an easy way to check if the current branc
 
 It's a good way to help developers keep their branch names clean on the repository and facilitate the workflow of a project with strict naming rules.
 
-The default pattern follows the principles described [here](https://lcluber.github.io/LeadDevToolkit/git/BRANCH.html).
+The default pattern follows the principles described [here](https://dwtechs.github.io/efficient-git/branch/).
 
-But you can set your own rules using a [custom pattern](#pattern).
+You can also set your own rules using a [custom pattern](#pattern).
 
 ## Installation
 
@@ -74,7 +79,6 @@ $ npx gbvalidator
 Or as an npm script in your package.
 
 ```json
-// package.json
 {
   "scripts": {
     "commit": "gbvalidator"
@@ -84,9 +88,9 @@ Or as an npm script in your package.
 
 ### Pattern
 
-- Default : **/^(feature|bugfix|release|hotfix|refactor|test|doc|build)\/([a-z0-9_#-\.\/]){3,40}\$/**
+- Default : **/^(feature|bugfix|release|hotfix|refactor|test|doc|build)\/([a-z0-9_#-\.\/]){3,40}$/**
 
-The default pattern follows the principles described [here](https://lcluber.github.io/LeadDevToolkit/git/BRANCH.html).
+The default pattern follows the principles described [here](https://dwtechs.github.io/efficient-git/branch/).
 
 You can use your own custom pattern by adding an optional regexp :
 
@@ -103,7 +107,7 @@ You can customize the end of the error message :
 
 ```bash
 $ cd <git-project>
-$ gbvalidator --message "You can learn more about branch name conventions of this project on https://lcluber.github.io/LeadDevToolkit/git/BRANCH.html"
+$ gbvalidator --message "You can learn more about branch name conventions of this project on https://dwtechs.github.io/efficient-git/branch/"
 ```
 
 ### Workflow integration
@@ -115,7 +119,6 @@ $ npm install husky --save-dev
 ```
 
 ```json
-// package.json
 {
   "husky": {
     "hooks": {
@@ -140,7 +143,7 @@ To contribute please read **[NOTICE.md](https://github.com/LCluber/GitBranchVali
 
 ## License
 
-**[MIT](https://github.com/LCluber/GitBranchValidator/blob/master/LICENSE.md)**
+**[MIT](https://github.com/LCluber/GitBranchValidator/blob/master/LICENSE)**
 
 ## Stack
 
@@ -149,4 +152,3 @@ To contribute please read **[NOTICE.md](https://github.com/LCluber/GitBranchVali
 | repository      |    [Github](https://github.com/)     | hosting for software development version control using Git |
 | package manager | [npm](https://www.npmjs.com/get-npm) |                            default node.js package manager |
 | unit testing    |      [Jest](https://jestjs.io/)      |              delightful testing with a focus on simplicity |
-| deployment      |   [Travis](https://travis-ci.com/)   |                            test and deploy with confidence |
